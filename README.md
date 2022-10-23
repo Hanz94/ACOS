@@ -62,6 +62,35 @@ We further investigate the ability of different systems in addressing the implic
   <img src="img/separate_results.PNG" width="80%"/>
 </p>
 
+## Example parameters for windows
+
+<p>
+--task_name
+quad
+--do_train
+--domain_type
+laptop
+--model_type
+quad
+--do_lower_case
+--data_dir
+C:\ACOS\ACOS\Extract-Classify-ACOS
+--bert_model
+C:\ACOS\ACOS\model
+--max_seq_length
+128
+--train_batch_size
+24
+--learning_rate
+2e-5
+--num_train_epochs
+30
+--output_dir
+C:\ACOS\ACOS\model/output/Extract-Classify-QUAD/laptop_1st/
+</p>
+
+
+
 ## Citation
 If you use the data and code in your research, please cite our paper as follows:
 ```
