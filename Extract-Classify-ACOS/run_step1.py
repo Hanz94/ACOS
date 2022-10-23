@@ -30,9 +30,9 @@ import math
 import codecs as cs
 from sklearn.model_selection import KFold
 
-gm = GPUManager()
-device = gm.auto_choice(mode=0)
-os.environ["CUDA_VISIBLE_DEVICES"] = str(device)
+# gm = GPUManager()
+# device = gm.auto_choice(mode=0)
+# os.environ["CUDA_VISIBLE_DEVICES"] = str(device)
 
 import numpy as np
 
@@ -301,7 +301,7 @@ def main():
         exist_imp_opinion = torch.tensor([f.exist_imp_opinion for f in train_features], dtype=torch.long)
 
         valid_examples = processor.get_valid_examples(args.data_dir, args.domain_type)
-        f = cs.open(args.data_dir+'/tokenized_data/'+args.domain_type +'_dev_quad_bert.tsv', 'r').readlines()
+        f = cs.open(args.data_dir+'/tokenized_data/'+args.domain_type +'_dev_quad_bert.tsv', 'r',  encoding="utf8").readlines()
         for line in f:
             cur_exist_imp_aspect = 0
             cur_exist_imp_opinion = 0
