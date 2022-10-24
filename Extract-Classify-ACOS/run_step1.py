@@ -232,7 +232,7 @@ def main():
     valid_gold = []
     if args.do_eval:
         eval_examples = processor.get_dev_examples(args.data_dir, args.domain_type)
-        f = cs.open(args.data_dir+'/tokenized_data/'+args.domain_type +'_test_quad_bert.tsv', 'r').readlines()
+        f = cs.open(args.data_dir+'/tokenized_data/'+args.domain_type +'_test_quad_bert.tsv', 'r', encoding="utf8").readlines()
         for line in f:
             cur_exist_imp_aspect = 0
             cur_exist_imp_opinion = 0
